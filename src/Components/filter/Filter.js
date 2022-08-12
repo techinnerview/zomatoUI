@@ -3,7 +3,7 @@ import axios from 'axios';
 import '../../Styles/details.css';
 import '../../Styles/Filter.css';
 import queryString from 'query-string';
-import { API_URL } from '../../../properties';
+import { API_URL } from '../../properties';
 
 // Class Component
 class Filter extends React.Component {

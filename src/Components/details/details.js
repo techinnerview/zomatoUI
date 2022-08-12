@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import '../../Styles/details.css';
 import queryString from 'query-string';
-import { API_URL } from '../../../properties';
+import { API_URL } from '../../properties';
 
 // Class Component
 class Details extends React.Component {

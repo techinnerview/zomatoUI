@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import '../../Styles/wallpaper.css';
 import { withRouter } from 'react-router-dom';
-import { API_URL } from '../../../properties';
+import { API_URL } from '../../properties';
 
 // Class Component
 class Wallpaper extends React.Component {

@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Wallpaper from './Wallpaper';
 import QuickSearch from './QuickSearch';
+import { API_URL } from '../../properties';
 
 // Class Component
 class Home extends React.Component {
@@ -18,14 +19,14 @@ class Home extends React.Component {
         axios(
             {
                 method: 'GET',
-                url: 'http://localhost:3000/citylist/getcitylist',
+                url: `${API_URL}/citylist/getcitylist`,
                 headers: { 'Content-Type': 'application/json' }
             }
         ).then(response => this.setState({ location: response.data })).catch()
         axios(
             {
                 method: 'GET',
-                url: 'http://localhost:3000/meals/getMeals',
+                url: `${API_URL}/meals/getMeals`,
                 headers: { 'Content-Type': 'application/json' }
             }
         ).then(response => this.setState({ mealType: response.data })).catch()
