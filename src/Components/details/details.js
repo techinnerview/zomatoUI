@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import '../../Styles/details.css';
 import queryString from 'query-string';
+import { API_URL } from '../../../properties';
 
 // Class Component
 class Details extends React.Component {
@@ -19,7 +20,7 @@ class Details extends React.Component {
         axios(
             {
                 method: 'GET',
-                url: `http://localhost:3000/restaurant/getRestaurantById/${restaurantId}`,
+                url: `${API_URL}/restaurant/getRestaurantById/${restaurantId}`,
                 headers: { 'Content-Type': 'application/json' }
             }
         ).then(response => this.setState({ restaurantData: response.data })).catch()

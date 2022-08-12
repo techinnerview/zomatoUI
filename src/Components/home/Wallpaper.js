@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import '../../Styles/wallpaper.css';
 import { withRouter } from 'react-router-dom';
+import { API_URL } from '../../../properties';
 
 // Class Component
 class Wallpaper extends React.Component {
@@ -19,7 +20,7 @@ class Wallpaper extends React.Component {
     axios(
       {
         method: 'GET',
-        url: `http://localhost:3000/restaurant/getRestaurantByName?name=${locationName}`,
+        url: `${API_URL}/restaurant/getRestaurantByName?name=${locationName}`,
         headers: { 'Content-Type': 'application/json' }
       }
     ).then(response => this.setState({ restaurants: response.data })).catch()

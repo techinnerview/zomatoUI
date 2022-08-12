@@ -3,6 +3,7 @@ import axios from 'axios';
 import '../../Styles/details.css';
 import '../../Styles/Filter.css';
 import queryString from 'query-string';
+import { API_URL } from '../../../properties';
 
 // Class Component
 class Filter extends React.Component {
@@ -21,14 +22,14 @@ class Filter extends React.Component {
         axios(
             {
                 method: 'GET',
-                url: 'http://localhost:3000/citylist/getcitylist',
+                url: `${API_URL}/citylist/getcitylist`,
                 headers: { 'Content-Type': 'application/json' }
             }
         ).then(response => this.setState({ locationValues: response.data })).catch()
         axios(
             {
                 method: 'GET',
-                url: 'http://localhost:3000/restaurant/getRestaurants',
+                url: `${API_URL}/restaurant/getRestaurants`,
                 headers: { 'Content-Type': 'application/json' }
             }
         ).then(response => this.setState({ restaurantData: response.data })).catch()
